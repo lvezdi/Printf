@@ -1,6 +1,10 @@
 NAME = libftprintf.a
 
-SRC = 
+SRC = printf.c \
+		print_int.c \
+		print_char.c \
+		print_hexadecimal.c \
+		print_str.c
 
 OBJS = $(SRC:.c=.o)
 

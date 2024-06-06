@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   print_str.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvez-dia <lvez-dia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/03 10:52:37 by lvez-dia          #+#    #+#             */
-/*   Updated: 2024/06/03 12:57:56 by lvez-dia         ###   ########.fr       */
+/*   Created: 2024/06/03 16:50:57 by lvez-dia          #+#    #+#             */
+/*   Updated: 2024/06/06 11:17:57 by lvez-dia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
+int	print_str(char *s)
+{
+	int	i;
+
+	i = 0;
+	if (!s)
+		return (write (1, "(null)", 6));
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	return (i);
+}
+
+/*#include <stdio.h>
 int main()
 {
-    printf("número de caracteres imprimidos: %i\n", my_printf("contenido: %X\n", 46474));
-    printf("número de caracteres imprimidos: %i\n", printf("contenido: %X\n", 46474));
-    //poner printf de todas las funciones
-    return (0);
-}
+	char	*hola = NULL;
+	printf("Number of characters: %i\n", ft_printf("Content: %s\n", hola));
+	printf("Number of characters: %i\n", printf("Content: %s\n", hola));
+	return (0);
+}*/
