@@ -1,3 +1,5 @@
+<img src="https://img.shields.io/badge/score-100%20%2F%20100-2ea44f?style=for-the-badge" class="right-align" alt="Score Badge">
+
 # Ft_printf 🇬🇧
 This is a project where you recreate the behaviour of the printf function from the standard C library and learn about variadic functions.
 
